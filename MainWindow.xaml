@@ -1,0 +1,59 @@
+﻿<Window x:Class="DesignPatterns.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DesignPatterns"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Border BorderBrush="AliceBlue" BorderThickness="1">
+        <TabControl Name="tctrlMain">
+            <TabItem Header="Singleton">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="35"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Ensure a class has only one instance and provide a global point of access to it." FontWeight="DemiBold" Foreground="Red" FontSize="16" TextWrapping="Wrap" Margin="2"  Grid.Row="0"/>
+                    <Label Content="Give a Constant Value " Grid.Row="1"/>
+                    <TextBox Name="txtConstantVal" Grid.Row="2" Margin="2"/>
+                    <Button Name="btnSave" Grid.Row="3" Margin="2" Content="Save Value" Click="btnSave_Click"/>
+                    <Button Name="btnNavigate" Grid.Row="4" Margin="2" Content="Navigate New Page" Click="btnNavigate_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Proxy">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="35"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="A proxy, in its most general form, is a class functioning as an interface to something else." FontWeight="DemiBold" Foreground="Red" FontSize="16" TextWrapping="Wrap" Margin="2"  Grid.Row="0"/>
+                    <TextBox Name="txtSampleVal" Grid.Row="1" Margin="2"/>
+                    <Button Name="btnSaveProxy" Content="Call Proxy" Grid.Row="2" Margin="2" Click="btnSaveProxy_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Observer">
+                <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="35"/>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="35"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically" FontWeight="DemiBold" Foreground="Red" FontSize="16" TextWrapping="Wrap" Margin="2"  Grid.Row="0"/>
+                <TextBox Name="txtInvestor" Grid.Row="1" Margin="2"/>
+                    <Button Name="btnAddInvestor" Content="Add Investor" Grid.Row="2" Margin="2" Click="btnAddInvestor_Click"/>
+                    <TextBox Name="txtNewAmout" Grid.Row="3" Margin="2"/>
+                    <Button Name="btnUpdateAmt" Content="Update Stock Amount" Grid.Row="4" Margin="2" Click="btnUpdateAmt_Click"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Border>
+</Window>
